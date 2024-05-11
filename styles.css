@@ -73,4 +73,69 @@ footer {
     max-width: 100%;
     height: auto;
   }
-  
+  /* Estilo para a seção de serviços */
+/* Estilo para a seção de serviços */
+section {
+    position: relative; /* Define a posição relativa para os elementos filhos */
+    overflow: hidden; /* Esconde qualquer conteúdo que transborde */
+}
+
+/* Estilo para o slider */
+.barbearia-slider {
+    display: flex;
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Faz com que os itens do slider parem em posições definidas */
+    -webkit-overflow-scrolling: touch; /* Ativa a rolagem suave no iOS */
+    scroll-behavior: smooth; /* Adiciona uma animação de rolagem suave */
+}
+
+/* Estilo para os itens do slider */
+.barbearia-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start; /* Define o ponto de alinhamento para os itens do slider */
+}
+
+/* Estilo para as setas de navegação */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/* Estilo para a seta de navegação anterior */
+.prev {
+    left: 0;
+}
+
+/* Estilo para a seta de navegação seguinte */
+.next {
+    right: 0;
+}
+/* Estilo para os botões de navegação */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+}
+
+/* Estilo para o botão de navegação à esquerda */
+.prev {
+    left: 0;
+}
+
+/* Estilo para o botão de navegação à direita */
+.next {
+    right: 0;
+}
