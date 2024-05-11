@@ -1,14 +1,76 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const servicos = document.querySelectorAll('.servico');
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    servicos.forEach(servico => {
-        servico.addEventListener('mouseover', function() {
-            this.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
-            this.style.transition = 'box-shadow 0.3s';
-        });
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
 
-        servico.addEventListener('mouseout', function() {
-            this.style.boxShadow = 'none';
-        });
-    });
-});
+nav {
+    background-color: #666;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+section {
+    padding: 20px;
+}
+
+.barbearia-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.barbearia-item div {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.barbearia-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.slide {
+    display: none; /* Oculta todos os slides por padrão */
+  }
+  
+  .slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  .slide {
+    display: flex; /* Define os slides como um container flexível */
+    justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+    align-items: center; /* Centraliza verticalmente os elementos filhos */
+  }
+  
+  .slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  

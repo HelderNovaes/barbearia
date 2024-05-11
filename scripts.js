@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const servicos = document.querySelectorAll('.servico');
+let slideIndex = 0;
+let slides = document.getElementsByClassName("slide");
 
-    servicos.forEach(servico => {
-        servico.addEventListener('mouseover', function() {
-            this.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
-            this.style.transition = 'box-shadow 0.3s';
-        });
+function showSlides() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  // Oculta todos os slides
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  // Exibe o slide atual
+  setTimeout(showSlides, 2000); // Altera o slide a cada 2 segundos
+}
 
-        servico.addEventListener('mouseout', function() {
-            this.style.boxShadow = 'none';
-        });
-    });
-});
+showSlides(); // Inicia o carrossel de slides
